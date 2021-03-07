@@ -22,3 +22,7 @@ To create my API server, I did the following:
     - e.g. `touch app.js` or `touch server.js`
     - In your newly created file, require Express and save it to a variable e.g. `const express = require('express')`
     - Create a new instance of express and save it to a variable - this will be our server! e.g. `const app = express()`
+    - Set up the root route (the 'homepage' for your server') `app.get('/', (req, res) => {res.send('Display message for homepage')})`
+    - Choose a local port (typically 3000) and tell the server to start listening for requests: 
+        - `const port = 3000`
+        - `app.listen(port, () => console.log('Visit http://localhost:${port} to see our content!'))`

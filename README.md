@@ -14,6 +14,11 @@ To create my API server, I did the following:
 2. `cd` into the repo and create a new folder directory called "server" (this is where all my code and files related to just the server side will be stored)
 3. Install express
     - `cd server` (this ensures express is installed inside the server folder)
-    - `npm init`
-    - `npm install express --save`
+    - `npm init` (under "main", type the name of the file you intend to create your server from e.g. app.js)
+    - `npm install express --save` (this installs the express framework)
     - Remember to add node_modules to .gitignore
+4. Create the file for your server
+    - e.g. `touch app.js` or `touch server.js`
+    - In your newly created file, require Express and save it to a variable e.g. `const express = require('express')`
+    - Create a new instance of express and save it to a variable - this will be our server!
+

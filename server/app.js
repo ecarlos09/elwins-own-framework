@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/limericks', (req, res) => {
     res.send('Check out our example limerick!');
+    res.send('')
 });
 
 module.exports = app;

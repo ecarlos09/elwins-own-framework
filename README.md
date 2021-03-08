@@ -47,7 +47,7 @@ To create my API server, I did the following:
     - Rejigging your main server:
         - Inside the server folder, create a new js file e.g. `touch index.js`
         - Move `const port = ...` and `app.listen ...` from your app.js file to your index.js file
-        - In app.js `module.exports = { app };`
+        - In app.js `module.exports = app;`
         - In index.js `const app = require('./app');`
         - In the package.json file, change the dev script from `nodemon app.js` to `nodemon index.js`
     - Creating the test server:

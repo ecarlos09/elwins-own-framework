@@ -1,0 +1,20 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Client side code for limerick generator",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --watch --silent",
+    "coverage": "jest --coverage --silent"
+  },
+  "author": "Elwin Carlos",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "jest": "^26.6.3",
+    "watchify": "^4.0.0"
+  }
+}

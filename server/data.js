@@ -104,6 +104,12 @@ let randomCombination = (location) => {
 //Invoke the randomCombination function to randomly asign limerick entries
 randomCombination(location);
 
-let finalLimerick = `${userName} was a ${occupation} from ${location},\nWho one day was ${cause} ${object1},\nBut little did they know\nSome due diligence would show\nThat by doing so would ${incident} ${object2}`;
+let line1 = `${userName} was a ${occupation} from ${location},`
+let line2 = `\nWho one day was ${cause} ${object1},`
+let line3 = `\nBut little did they know`
+let line4 = `\nSome due diligence would show`
+let line5 = `\nThat by doing so would ${incident} ${object2}.`
+
+let finalLimerick = `${line1}${line2}${line3}${line4}${line5}`;
 
 module.exports = [];

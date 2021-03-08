@@ -39,9 +39,7 @@ To create my API server, I did the following:
 5. Introduce TDD:
     - Inside your server directory, `npm install jest supertest --save-dev` so that we can test our server requirements
     - Add the following scripts to your package.json file:
-        ...
-        "test": "jest --silent --watchAll"
-        "coverage": "jest --coverage --silent"
-        ...
+        - `"test": "jest --silent --watchAll"`
+        - `"coverage": "jest --coverage --silent"`
     - Create a new directory e.g. "Test" (`mkdir test`),  and `cd` into it
     - Create a new test suite, e.g. `touch api.spec.js`

@@ -21,7 +21,7 @@ describe('Testing the API server', () => {
         request(api).get('/').expect(200,done);
     });
 
-    it('responds to get /example with status 200', (done) => {
-        request(api).get('/example').expect(200,done);
+    it('responds to get /limericks with status 200', (done) => {
+        request(api).get('/limericks').expect(200,done);
     });
 });

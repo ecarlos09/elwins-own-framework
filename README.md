@@ -47,7 +47,7 @@ To create my API server, I did the following:
     - Rejigging your main server:
         - Inside the server folder, create a new js file e.g. `touch index.js`
         - Move `const port = ...` and `app.listen ...` from your app.js file to your index.js file
-        - In app.js `module.exports = { app };`
+        - In app.js `module.exports = app;`
         - In index.js `const app = require('./app');`
         - In the package.json file, change the dev script from `nodemon app.js` to `nodemon index.js`
     - Creating the test server:
@@ -58,3 +58,9 @@ To create my API server, I did the following:
             - Inside the describe block, declare a variable for your api (`let api`) and add two functions (these will respectively start and exit your server):
                 - `beforeAll (() => {api = app.listen(5000, () => {console.log('Test server is running on port 5000')})})`
                 - `afterAll ((done) => {console.log('Gracefully exiting test server'); api.close(done)}))`
+7. Add a test!
+    - Create a new test block below your beforeAll and afterAll functions
+        - e.g Test to see if the main directory responds with a 200 status:
+        - `it('responds to get / with status 200', (done) => {request(api).get('/').expect(200,done)})`
+        - Ensure you are in your server directory then `npm run test` in the terminal to run the tests
+    - N.B. You can also create tests for extra filepaths and commands (which we will do below!)

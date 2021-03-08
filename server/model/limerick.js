@@ -37,4 +37,4 @@ class Limerick {
     // }
 }
 
-module.exports = Cat;
+module.exports = Limerick;

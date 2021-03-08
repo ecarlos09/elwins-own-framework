@@ -1,20 +1,21 @@
 const locations = ['Wales', 'Leeds', 'York'];
+const occupations = ['Butcher', 'Baker', 'Candlestick maker' ];
 
-const walesObjects = {
+const walesCauses = {
     "reading": 'their scales', 
     "painting": 'their nails', 
     "drinking": 'some ale', 
     "sending": 'emails'
 };
 
-const leedsObjects = {
+const leedsCauses = {
     "pulling out": 'some weeds',
     "researching": 'the Swedes',
     "naming": 'dog breeds', 
     "downing": ' mead',
 };
 
-const yorkObjects = {
+const yorkCauses = {
     "bending": 'a fork', 
     "tenderizing": 'some pork', 
     "pulling out": 'a cork', 
@@ -41,3 +42,37 @@ const yorkIncidents = {
     "pluck the hairs from": 'a stork', 
     "banish": 'all the orcs'
 };
+
+const randArrayIndex = (array) => {
+    return Math.floor(Math.random()*(array.length)) - 1;
+};
+
+const randObjectIndex = (object) => {
+    return object;
+};
+
+let userName = 'John Smith';
+let occupation = occupations[randArrayIndex(occupations)];
+let location = locations[randArrayIndex(locations)];
+
+let cause = (location) => {
+    switch (location) {
+        case 'Wales':
+            break;
+        case 'Leeds':
+            break;
+        case 'York':
+            break;
+        default:
+            return 'Error!';
+            break;
+    };
+};
+
+let line1 = `${userName} was a ${occupation} from ${location}},`;
+let line2 = `Who one day was action object,`;
+let line3 = `But little did they know`;
+let line4 = `Some due diligence would show`;
+let line5 = `That by doing so would action incident!`;
+
+module.exports = [locations, walesCauses, leedsCauses, yorkCauses, walesIncidents, leedsIncidents, yorkIncidents];

@@ -72,3 +72,9 @@ To create my API server, I did the following:
     - e.g. `cd server` then `touch data.js`
     - The data.js file should just be a collection of information.  You can store it in whatever format you wish e.g. arrays, JavaScript/JSON Objects etc. - whatever works best for you!
     - Check out my data.js file in the repo to see how I did this
+10. Create the model:
+    - The model is where we define what our app will do.  In this case, it will handle the logic for creating our limerick, which we will store inside a limerick class
+    - First, create a new directory inside server e.g. `mkdir model`
+    - `cd` into the new directory and create a new file e.g. `model.js` or `limerick.js`
+    - Export your data from data.js and import into the new file using require
+    - Inside the new file, create a new class e.g. `class Limerick`

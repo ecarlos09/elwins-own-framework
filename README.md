@@ -43,3 +43,18 @@ To create my API server, I did the following:
         - `"coverage": "jest --coverage --silent"`
     - Create a new directory e.g. "Test" (`mkdir test`),  and `cd` into it
     - Create a new test suite, e.g. `touch api.spec.js`
+6. Create a separate server for your tests:
+    - Rejigging your main server:
+        - Inside the server folder, create a new js file e.g. `touch index.js`
+        - Move `const port = ...` and `app.listen ...` from your app.js file to your index.js file
+        - In app.js `module.exports = { app };`
+        - In index.js `const app = require('./app');`
+        - In the package.json file, change the dev script from `nodemon app.js` to `nodemon index.js`
+    - Creating the test server:
+        - In the api.spec.js file, add: `const request = require('supertest');`
+        - Below that, import the server from app.js: `const app = require('../app')`
+        - Create the test server:
+            - `describe('Testing the API server', () => {});`
+            - Inside the describe block, declare a variable for your api (`let api`) and add two functions:
+                - `beforeAll (() => {api = app.listen(5000, () => {console.log('Test server is running on port 5000')})})`
+                - `afterAll ((done) => {console.log('Gracefully exiting test server'); api.close(done)}))`

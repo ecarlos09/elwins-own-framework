@@ -1,7 +1,7 @@
 const locations = ['Wales', 'Leeds', 'York'];
 
 const walesObjects = {
-    "using": 'their scales', 
+    "reading": 'their scales', 
     "painting": 'their nails', 
     "drinking": 'some ale', 
     "sending": 'emails'

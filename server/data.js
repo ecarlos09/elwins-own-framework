@@ -112,4 +112,14 @@ let line5 = `\nThat by doing so would ${incident} ${object2}.`
 
 let finalLimerick = `${line1}${line2}${line3}${line4}${line5}`;
 
-module.exports = [];
+let exampleLimerick = [
+    {
+        id: 1, 
+        author: "Elwin",
+        occupation: `${occupation}`, 
+        location: `${location}`, 
+        limerick: `${finalLimerick}`
+    }
+] 
+
+module.exports = exampleLimerick;

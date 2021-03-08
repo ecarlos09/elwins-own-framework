@@ -55,6 +55,6 @@ To create my API server, I did the following:
         - Below that, import the server from app.js: `const app = require('../app')`
         - Create the test server:
             - `describe('Testing the API server', () => {});`
-            - Inside the describe block, declare a variable for your api (`let api`) and add two functions:
+            - Inside the describe block, declare a variable for your api (`let api`) and add two functions (these will respectively start and exit your server):
                 - `beforeAll (() => {api = app.listen(5000, () => {console.log('Test server is running on port 5000')})})`
                 - `afterAll ((done) => {console.log('Gracefully exiting test server'); api.close(done)}))`

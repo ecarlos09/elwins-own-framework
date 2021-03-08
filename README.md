@@ -64,3 +64,11 @@ To create my API server, I did the following:
         - `it('responds to get / with status 200', (done) => {request(api).get('/').expect(200,done)})`
         - Ensure you are in your server directory then `npm run test` in the terminal to run the tests
     - N.B. You can also create tests for extra filepaths and commands (which we will do below!)
+8. Create a new sub route:
+    - You can do this easily using a similar method to creating the root route
+    - e.g. `app.get('/example', (req, res) => {res.send('Welcome to localhost:3000/example!')})`
+9. Add some more functionality using the MVC approach
+    - I will try and allow users to create personalised limericks.  To do this, I will need a mini database of words and information that will be incorportated into a basic limerick structure.  This database will be stored in a separate file inside the server directory (but outside the test directory!)
+    - e.g. `cd server` then `touch data.js`
+    - The data.js file should just be a collection of information.  You can store it in whatever format you wish e.g. arrays, JavaScript/JSON Objects etc. - whatever works best for you!
+    - Check out my data.js file in the repo to see how I did this

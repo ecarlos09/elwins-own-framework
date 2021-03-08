@@ -31,4 +31,8 @@ To create my API server, I did the following:
         - `npm install nodemon --save-dev`
         - In your package.json file, add a nodemon command to your script object e.g. `"start":"nodemon app.js"`
         - `npm run start` will now start your server and activate nodemon
-    - 
+    - Install CORS (cross-origin resource sharing)
+        - Ensure you are still in your server folder
+        - `npm install cors --save-dev`
+        - In the app.js file (or equivalent), `const cors = require('cors');`
+        - In the same file, after the server declaration, instruct it to use CORS: `app.use(cors());`

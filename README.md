@@ -26,3 +26,9 @@ To create my API server, I did the following:
     - Choose a local port (typically 3000) and tell the server to start listening for requests: 
         - `const port = 3000`
         - `app.listen(port, () => console.log('Visit http://localhost:${port} to see our content!'))`
+    - (Optional) Install nodemon so that the server auto-updates after changes are saved
+        - Ensure you are still in your server folder
+        - `npm install nodemon --save-dev`
+        - In your package.json file, add a nodemon command to your script object e.g. `"start":"nodemon app.js"`
+        - `npm run start` will now start your server and activate nodemon
+    - 

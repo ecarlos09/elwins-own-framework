@@ -8,7 +8,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-    res.send('Welcome to our site!  Use the options below to generate your own personalilsed limerick.');
+    res.send('Welcome to our site!  Use the options below to generate your own personalised limerick.');
 });
 
 app.get('/example', (req, res) => {

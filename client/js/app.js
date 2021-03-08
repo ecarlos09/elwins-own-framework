@@ -2,10 +2,10 @@
 
 
 // ********************************************
-// CATS FLOW
+// Limerick flow
 // index
-function getAllCats(){
-    fetch('http://localhost:3000/cats')
+function getAllLimericks(){
+    fetch('http://localhost:3000/limericks')
         .then(r => r.json())
         .then(appendCats)
         .catch(console.warn)

@@ -78,6 +78,10 @@ To create my API server, I did the following:
     - `cd` into the new directory and create a new file e.g. `model.js` or `limerick.js`
     - Export your data from data.js and import into the new file using require
     - Inside the new file, create a new class e.g. `class Limerick`
+    - to be continued ...
+11. Create the controllers:
+    - The controllers allow the user to interact with the app
+    - Full instruction will be posted here soon ...
 
 
 N.B. If you would like to view/run my code for generating a random (non-personalised) limerick, please visit my repl.it page @ https://repl.it/@ecarlos09/Limerick-generator#index.js

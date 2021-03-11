@@ -1,17 +1,95 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+//Client side functionality goes here
+
+
+// ********************************************
+// Limerick flow
+// index
+function getAllLimericks(){
+    fetch('http://localhost:3000/limericks')
+        .then(r => r.json())
+        .then(appendLimericks)
+        .catch(console.warn)
+};
+
+// // create
+// function submitCat(e){
+//     e.preventDefault();
+
+//     const catData = {
+//         name: e.target.name.value,
+//         age: e.target.age.value
+//     };
+
+//     const options = { 
+//         method: 'POST',
+//         body: JSON.stringify(catData),
+//         headers: {
+//             "Content-Type": "application/json"
+//         }
+//     };
+
+//     fetch('http://localhost:3000/cats', options)
+//         .then(r => r.json())
+//         .then(appendCat)
+//         .catch(console.warn)
+// };
+
+// helpers
+function appendLimericks(limericks){
+    limericks.forEach(appendLimerick);
+};
+
+function appendLimerick(limerickData){
+    const newLimerick = document.createElement('li');
+    newLi.textContent = `Name: ${limerickData.name} || Age: ${limerickData.age}`
+    const limericksList = document.querySelector('ul');
+    limericksList.append(newLi);
+};
+
+// // ********************************************
+
+// // MESSAGE FLOW
+// function getMessage(){
+//     fetch('http://localhost:3000')
+//         .then(r => r.text())
+//         .then(renderMessage)
+//         .catch(console.warn)
+// };
+
+// function renderMessage(msgText){
+//     const msg = document.createElement('p');
+//     msg.textContent = msgText;
+//     msg.style.color = 'red';
+//     document.body.append(msg);
+// };
+
+// // ********************************************
+
+// module.exports = {
+//     getAllCats,
+//     submitCat,
+//     appendCats,
+//     appendCat,
+//     getMessage,
+//     renderMessage
+// }
+},{}],2:[function(require,module,exports){
+console.log('Hello, you found my JavaScript!')
+
+//Import helpers
+const helpers = require('./helpers');
+
 //Setup event listeners here
 
-  
 // ********************************************
 // SETUP
+function initBindings() {
+    let createBtn = document.getElementById('create');
+    createBtn.addEventListener('click', helpers.createLimerick);
+}
 const btn = document.querySelector('button');
 const form = document.querySelector('#new-limerick-form');
 
-// Bind event listeners
-btn.addEventListener('click', getMessage);
-form.addEventListener('submit', submitCat);
-
-// Fetch all limericks as soon as app is loaded
-getAllLimericks();
-// ********************************************
-},{}]},{},[1]);
+initBindings();
+},{"./helpers":1}]},{},[2]);

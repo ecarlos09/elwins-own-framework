@@ -6,15 +6,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const limerickRoutes = require("./controllers/limericks");
-// app.use('/limericks', limerickRoutes);
-
+//Root route
 app.get('/', (req, res) => {
     res.send('Welcome to our site!  Use the options to generate your own personalised limerick.  \nWhen you are finished, click "Create your limerick!');
 });
 
-app.get('/limericks', (req, res) => {
-    res.send('Check out our example limerick!');
-});
+//Route for all limericks
+const limerickRoutes = require("./controllers/limericks");
+app.use('/limericks', limerickRoutes);
 
 module.exports = app;

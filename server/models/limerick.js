@@ -1,11 +1,10 @@
 const limericksData = require('../data');
+const limerickGen = require('./limerick_gen');
 
 class Limerick {
     constructor(data) {
         this.id = data.id;
         this.author = data.author;
-        this.occupation = data.occupation;
-        this.location = data.location;
         this.limerick = data.limerick;        
     }
 
@@ -14,22 +13,30 @@ class Limerick {
         return limericks;
     }
 
-    // static findById(id) {
-    //     try {
-    //         const catData = catsData.filter((cat) => cat.id === id)[0];
-    //         const cat = new Cat(catData);
-    //         return cat;
-    //     } catch (err) {
-    //         throw new Error('That cat does not exist!');
-    //     }
-    // }
+    static findById(id) {
+        try {
+            const limerickData = limericksData.filter((limerick) => limerick.id === id)[0];
+            const limerick = new Limerick(limerickData);
+            return limerick;
+        } catch (err) {
+            throw new Error('ID error');
+        }
+    }
 
-    // static create(cat) {
-    //     const newCatId = catsData.length + 1;
-    //     const newCat = new Cat({ id: newCatId, ...cat });
-    //     catsData.push(newCat);
-    //     return newCat;
-    // }
+    static create(limerick) {
+        const newLimerickId = allLimericks.length + 1;
+        const newLimerickAuthor = "newAuthor";
+        const newEntry = LimerickGen();
+        const newLimerick = new Limerick(
+            {
+                id: newLimerickId,
+                author: newLimerickAuthor,
+                limerick: newEntry
+            }
+        );
+        limericksData.push(newLimerick);
+        return newLimerick;
+    }
 
     // destroy() {
     //     const cat = catsData.filter((cat) => cat.id === this.id)[0];

@@ -1,35 +1,13 @@
-
-
-
-
-
-
-
-
-
-
-
-
-//Create function that generates a random array index
-const randArrayIndex = (array) => {
-    return Math.floor(Math.random()*(array.length));
-};
-//Create function that returns a random key from an object
-const randObjectKey = (object) => {
-    let objectKeys = Object.keys(object);
-    let randomIndex = Math.floor(Math.random()*(objectKeys.length));
-    return objectKeys[randomIndex];
-};
-
-
-let exampleLimerick = [
+const allLimericks = [
     {
         id: 1, 
         author: "Elwin",
-        occupation: `${occupation}`, 
-        location: `${location}`, 
-        limerick: `${finalLimerick}`
+        limerick: `Elwin was a coder from Blighty,
+                    \nWho one day received a big frighty,
+                    \nBut little did he know
+                    \nWith persistence he'd grow
+                    \nJust a little bit fonder of chai tea.`
     }
 ] 
 
-module.exports = exampleLimerick;
+module.exports = allLimericks;

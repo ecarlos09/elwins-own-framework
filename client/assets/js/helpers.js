@@ -1,15 +1,29 @@
 //Client side functionality goes here
 
-
-// ********************************************
-// Limerick flow
-// index
-function getAllLimericks(){
-    fetch('http://localhost:3000/limericks')
+function showExample(){
+    fetch('http://localhost:3000/limericks/1')
         .then(r => r.json())
-        .then(appendLimericks)
+        .then(appendLimerick)
         .catch(console.warn)
 };
+
+function createLimerick() {
+    //create it here
+}
+
+function appendLimerick(limerickData){
+    const body = document.body;
+    const limerickLocation = document.getElementById('eg-here');
+    const limerick = limerickData.limerick;
+    const displayLimerick = limerickLocation.innerHTML = `${limerick}`;
+
+    // const limerick = document.createElement('li');
+    // newLi.textContent = `Name: ${limerickData.name} || Age: ${limerickData.age}`
+    // const limericksList = document.querySelector('ul');
+    // limericksList.append(newLi);
+};
+
+module.exports = { showExample }
 
 // // create
 // function submitCat(e){
@@ -34,17 +48,10 @@ function getAllLimericks(){
 //         .catch(console.warn)
 // };
 
-// helpers
-function appendLimericks(limericks){
-    limericks.forEach(appendLimerick);
-};
-
-function appendLimerick(limerickData){
-    const newLimerick = document.createElement('li');
-    newLi.textContent = `Name: ${limerickData.name} || Age: ${limerickData.age}`
-    const limericksList = document.querySelector('ul');
-    limericksList.append(newLi);
-};
+// // helpers
+// function appendLimericks(limericks){
+//     limericks.forEach(appendLimerick);
+// };
 
 // // ********************************************
 

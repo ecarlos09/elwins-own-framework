@@ -23,10 +23,10 @@ const limerickReqs = [
         name: "leedsCauses",
         dataType: "Object",
         info: {
-            "pulling out": 'some weeds',
+            "removing": 'some weeds',
             "researching": 'the Swedes',
             "naming": 'dog breeds', 
-            "downing": ' mead',
+            "downing": 'mead',
         }
     },
     {
@@ -35,7 +35,7 @@ const limerickReqs = [
         info: {
             "bending": 'a fork', 
             "tenderizing": 'some pork', 
-            "pulling out": 'a cork', 
+            "removing": 'a cork', 
             "delivering": 'a stalk'
         }
     },
@@ -44,7 +44,7 @@ const limerickReqs = [
         dataType: "Object",
         info: {
             "annoy": 'Gareth Bale', 
-            "bring them to": 'jail', 
+            "ruin": 'jail', 
             "empower": 'all the snails', 
             "summon": 'the Holy Grail'
         }
@@ -65,7 +65,7 @@ const limerickReqs = [
         info: {
             "terrify": 'the singer Bjork', 
             "placate": 'Mickey Rourke', 
-            "pluck the hairs from": 'a stork', 
+            "liquefy": 'a stork', 
             "banish": 'all the orcs'
         }
     },

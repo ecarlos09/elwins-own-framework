@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "dev": "concurrently \"watchify ./assets/js/index.js -o bundle.js\" \"python -m http.server\"",
     "test": "jest --watch --silent",
     "coverage": "jest --coverage --silent"
   },

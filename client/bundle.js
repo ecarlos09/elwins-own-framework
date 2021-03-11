@@ -85,11 +85,11 @@ const helpers = require('./helpers');
 // ********************************************
 // SETUP
 function initBindings() {
-    let createBtn = document.getElementById('create');
+    const egBtn = document.getElementById('example');
+    const createBtn = document.getElementById('create');
+    egBtn.addEventListener('click', helpers.showExample);
     createBtn.addEventListener('click', helpers.createLimerick);
 }
-const btn = document.querySelector('button');
-const form = document.querySelector('#new-limerick-form');
 
 initBindings();
 },{"./helpers":1}]},{},[2]);

@@ -8,8 +8,22 @@ function showExample(){
         .catch(console.warn)
 };
 
+function showAll(){
+    fetch('http://localhost:3000/limericks/')
+        .then(r => r.json())
+        .then(appendAllLimericks)
+        .catch(console.warn)
+};
+
 function createLimerick() {
     //create it here
+}
+
+function appendAllLimericks() {
+    const body = document.body;
+    const limerickLocation = document.getElementById('show-all');
+    const limericks = limerickData;
+    const displayLimericks = limerickLocation.innerHTML = `${limericks}`;
 }
 
 function appendLimerick(limerickData){
@@ -94,8 +108,10 @@ const helpers = require('./helpers');
 function initBindings() {
     const egBtn = document.getElementById('example');
     const createBtn = document.getElementById('create');
+    const showAllBtn = document.getElementById('show-all');
     egBtn.addEventListener('click', helpers.showExample);
     createBtn.addEventListener('click', helpers.createLimerick);
+    showAllBtn.addEventListener('click', helpers.showAll);
 }
 
 initBindings();

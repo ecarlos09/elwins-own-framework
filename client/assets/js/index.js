@@ -10,8 +10,10 @@ const helpers = require('./helpers');
 function initBindings() {
     const egBtn = document.getElementById('example');
     const createBtn = document.getElementById('create');
+    const showAllBtn = document.getElementById('show-all');
     egBtn.addEventListener('click', helpers.showExample);
     createBtn.addEventListener('click', helpers.createLimerick);
+    showAllBtn.addEventListener('click', helpers.showAll);
 }
 
 initBindings();

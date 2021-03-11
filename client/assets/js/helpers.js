@@ -7,8 +7,22 @@ function showExample(){
         .catch(console.warn)
 };
 
+function showAll(){
+    fetch('http://localhost:3000/limericks/')
+        .then(r => r.json())
+        .then(appendAllLimericks)
+        .catch(console.warn)
+};
+
 function createLimerick() {
     //create it here
+}
+
+function appendAllLimericks() {
+    const body = document.body;
+    const limerickLocation = document.getElementById('show-all');
+    const limericks = limerickData;
+    const displayLimericks = limerickLocation.innerHTML = `${limericks}`;
 }
 
 function appendLimerick(limerickData){

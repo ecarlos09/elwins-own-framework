@@ -68,10 +68,10 @@ function randomLimerick() {
   };
 
   let line1 = `${userName} was a ${occupation} from ${location},`;
-  let line2 = `\nWho one day was ${cause} ${object1},`;
-  let line3 = `\nBut little did they know`;
-  let line4 = `\nSome due diligence would show`;
-  let line5 = `\nThat by doing so would ${incident} ${object2}.`;
+  let line2 = `<br>Who one day was ${cause} ${object1},`;
+  let line3 = `<br>But little did they know`;
+  let line4 = `<br>Some due diligence would show`;
+  let line5 = `<br>That by doing so would ${incident} ${object2}.`;
 
   let finalLimerick = `${line1}${line2}${line3}${line4}${line5}`;
 

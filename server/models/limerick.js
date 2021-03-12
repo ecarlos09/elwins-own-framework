@@ -24,9 +24,9 @@ class Limerick {
     }
 
     static create(limerick) {
-        const newLimerickId = allLimericks.length + 1;
+        const newLimerickId = limericksData.allLimericks.length + 1;
         const newLimerickAuthor = "newAuthor";
-        const newEntry = limerickGen;
+        const newEntry = limerickGen.randomLimerick();
         const newLimerick = new Limerick(
             {
                 id: newLimerickId,

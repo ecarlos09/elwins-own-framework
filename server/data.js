@@ -2,11 +2,7 @@ const allLimericks = [
     {
         id: 1, 
         author: "Elwin",
-        limerick: `Elwin was a coder from Blighty,
-                    \nWho one day received a big frighty,
-                    \nBut little did he know
-                    \nWith persistence he'd grow
-                    \nJust a little bit fonder of chai tea.`
+        limerick: `Elwin was a coder from Blighty,<br>Who one day received a big frighty,<br>But little did he know<br>With persistence he'd grow<br>Just a little bit fonder of chai tea.`
     }
 ] 
 
